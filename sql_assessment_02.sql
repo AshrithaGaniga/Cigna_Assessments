@@ -83,5 +83,5 @@ INSERT INTO orderdetails VALUES (2, 1, 3, 2, 1999); -- 2 Chargers
 INSERT INTO orderdetails VALUES (3, 2, 2, 2, 7999); -- 2 Head
 
 
-
+COMMIT;
    
