@@ -62,26 +62,32 @@ CONSTRAINT chk_unit_price CHECK (unit_price > 0)
 -- PRODUCTS
 INSERT INTO products VALUES (1, 'Iphone 14', 'Mobile', '14-inch, 16GB RAM, 512GB SSD', 89999, 25, SYSDATE);
 INSERT INTO products VALUES (2, 'Aero Wireless', 'Headphones', 'Bluetooth headset', 7999, 15, SYSDATE);
-INSERT INTO products VALUES (3, 'FastCharge 65W', 'Charger', 'USB-C  fast charger', 1999, 50, SYSDATE);
-INSERT INTO products VALUES (3, 'FastCharge 65W', 'Charger', 'USB-C  fast charger', 1999, 50, SYSDATE);
-INSERT INTO products VALUES (3, 'FastCharge 65W', 'Charger', 'USB-C  fast charger', 1999, 50, SYSDATE);
+INSERT INTO products VALUES (3, 'FastCharge 65W', 'Charger', 'USB-C  fast charger', 1399, 43, SYSDATE);
+INSERT INTO products VALUES (4, 'Amriti', 'Book', 'Thriller', 1499, 34, SYSDATE);
+INSERT INTO products VALUES (5, 'Fastract Watch', 'Watch', 'Womens watch', 1929,42, SYSDATE);
 
 
 
 
 -- -- CUSTOMERS
-INSERT INTO customers VALUES (100, 'Anisha', 'Kamat', 'aisha.kamat@example.com', '+91-9655768965', SYSDATE);
-INSERT INTO customers VALUES (101, 'Rohan', 'Verma', 'rohan.verma@example.com', '+91-9876457654', SYSDATE);
+INSERT INTO customers VALUES (100, 'Anisha', 'Kamat', 'aisha12@gmail.com', '+91-9655768965', SYSDATE);
+INSERT INTO customers VALUES (101, 'Rohan', 'Verma', 'rohan5@gmail.com', '+91-9876457654', SYSDATE);
+INSERT INTO customers VALUES (103, 'Avi', 'Sah', 'sah12@gmail.com', '+91-9867457654', SYSDATE);
+INSERT INTO customers VALUES (104, 'Aman', 'Khan', 'khan12@gmail.com', '+91-9876457854', SYSDATE);
+INSERT INTO customers VALUES (105, 'Rohan', 'sharma', 'rohan12@gmail.com', '+91-9876456654', SYSDATE);
+
 
 -- ORDERS
-INSERT INTO orders (order_id, customer_id, total_amount, status) VALUES (1, 100, 0, 'PLACED');
-INSERT INTO orders (order_id, customer_id, total_amount, status) VALUES (2, 101, 0, 'PLACED');
+INSERT INTO orders (order_id, customer_id, total_amount, status) VALUES (1, 100, 1399, 'PLACED');
+INSERT INTO orders (order_id, customer_id, total_amount, status) VALUES (2, 101, 1255, 'PLACED');
+INSERT INTO orders (order_id, customer_id, total_amount, status) VALUES (3, 105, 1272, 'PLACED');
+INSERT INTO orders (order_id, customer_id, total_amount, status) VALUES (4, 100, 12377, 'PLACED');
 
 -- ORDER DETAILS
-INSERT INTO orderdetails VALUES (1, 1, 1, 1, 89999); -- 1 Laptop
-INSERT INTO orderdetails VALUES (2, 1, 3, 2, 1999); -- 2 Chargers
-INSERT INTO orderdetails VALUES (3, 2, 2, 2, 7999); -- 2 Head
+INSERT INTO orderdetails VALUES (1, 1, 1, 1, 89999);
+INSERT INTO orderdetails VALUES (2, 1, 3, 2, 1999);
+INSERT INTO orderdetails VALUES (3, 2, 2, 2, 7999); 
 
 
-COMMIT;
+
    
