@@ -1,4 +1,4 @@
-
+-------------------------------Assissment 02-----------------------------------------------
 
 -- 1) PRODUCTS TABLE
 
@@ -88,6 +88,21 @@ INSERT INTO orderdetails VALUES (1, 1, 1, 1, 89999);
 INSERT INTO orderdetails VALUES (2, 1, 3, 2, 1999);
 INSERT INTO orderdetails VALUES (3, 2, 2, 2, 7999); 
 
+Q1. SELECT product_name,stock
+    FROM products
+    WHERE stock < 20;
 
+Q2. SELECT c.customer_id, c.first_name || ' ' || c.last_name AS customer_name,SUM(o.total_amount) AS total_spent
+    FROM customers c
+    JOIN orders o
+    ON c.customer_id = o.customer_id
+    GROUP BY c.customer_id, c.first_name, c.last_name
+    ORDER BY total_spent DESC;
 
+Q3. UPDATE products p
+    SET stock = stock - (
+    SELECT SUM(od.quantity)
+    FROM orderdetails od
+    WHERE od.product_id = p.product_id );
    
+
